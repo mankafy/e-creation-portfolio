@@ -67,24 +67,45 @@ export function ContactForm() {
   const done = status === "success";
 
   // Le widget vit dans le formulaire : on le (re)crée quand le formulaire réapparaît.
+  // Chargé seulement à l'approche du formulaire : le script Turnstile est lourd (~1,8 Mo)
+  // et ralentirait l'affichage de l'accueil sur mobile.
   useEffect(() => {
-    if (!turnstileSiteKey || done) return;
+    const target = captchaRef.current;
+    if (!turnstileSiteKey || done || !target) return;
     let cancelled = false;
-    loadTurnstile()
-      .then((turnstile) => {
-        const el = captchaRef.current;
-        if (cancelled || !el) return;
-        widgetId.current = turnstile.render(el, {
-          sitekey: turnstileSiteKey,
-          theme: "dark",
-          language: "fr",
-          appearance: "interaction-only",
-          size: el.clientWidth < 300 ? "compact" : "flexible",
-        });
-      })
-      .catch(() => {});
+    const render = () => {
+      loadTurnstile()
+        .then((turnstile) => {
+          const el = captchaRef.current;
+          if (cancelled || !el) return;
+          widgetId.current = turnstile.render(el, {
+            sitekey: turnstileSiteKey,
+            theme: "dark",
+            language: "fr",
+            appearance: "interaction-only",
+            size: el.clientWidth < 300 ? "compact" : "flexible",
+          });
+        })
+        .catch(() => {});
+    };
+    let observer: IntersectionObserver | undefined;
+    if (typeof IntersectionObserver === "undefined") {
+      render();
+    } else {
+      observer = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((e) => e.isIntersecting)) {
+            observer?.disconnect();
+            render();
+          }
+        },
+        { rootMargin: "800px 0px" },
+      );
+      observer.observe(target);
+    }
     return () => {
       cancelled = true;
+      observer?.disconnect();
       if (widgetId.current) window.turnstile?.remove(widgetId.current);
       widgetId.current = null;
     };

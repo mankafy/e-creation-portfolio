@@ -5,7 +5,8 @@ import { baseOpenGraph, defaultTitle, siteUrl } from "@/lib/seo";
 import "./globals.css";
 
 const poppins = Poppins({
-  subsets: ["latin", "latin-ext"],
+  // Seul le latin de base est préchargé ; latin-ext reste chargé à la demande (unicode-range).
+  subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   display: "swap",
   variable: "--font-poppins",

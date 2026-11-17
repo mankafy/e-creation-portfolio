@@ -102,7 +102,8 @@ export default async function ServicePage({ params }: PageProps) {
       <main id="contenu">
         <section className="section section--border">
           <div className="container case-head">
-            <Reveal>
+            {/* Pas de Reveal : le h1 est l'élément LCP, il doit s'afficher sans attendre le JS. */}
+            <div>
               <Link className="textlink case-back" href="/#services">
                 <ArrowLeft size={15} aria-hidden="true" /> Retour aux services
               </Link>
@@ -116,7 +117,7 @@ export default async function ServicePage({ params }: PageProps) {
                   Discuter de ce besoin <ArrowUpRight size={16} aria-hidden="true" />
                 </Link>
               </div>
-            </Reveal>
+            </div>
           </div>
         </section>
 

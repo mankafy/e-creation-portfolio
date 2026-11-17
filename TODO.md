@@ -66,6 +66,9 @@ Cocher au fur et à mesure. Ajouter ici tout nouveau chantier.
 
 ## UX / UI / qualité
 
-- [ ] Audit Lighthouse (performance, accessibilité, SEO, bonnes pratiques)
+- [x] Audit Lighthouse (17/11/2026, mobile accueil : perf 79, accessibilité 100, bonnes pratiques 93, SEO 100) : h1 affiché sans attendre le JS, Turnstile chargé à l'approche du formulaire, 5 polices préchargées au lieu de 10
+- [ ] Relancer Lighthouse mobile sur l'accueil après déploiement (objectif : LCP < 2,5 s)
+- [x] Autoriser Cloudflare Web Analytics dans la CSP et le mentionner dans la politique de confidentialité
+- [ ] Vérifier après déploiement que Web Analytics reçoit des visites (tableau de bord Cloudflare)
 - [x] Vérifier le responsive de 320px à grand écran (aucun débordement à 320/375/768/1280px)
 - [x] Vérifier la navigation clavier et les contrastes (texte ≥ 4.5:1, contours de champs ≥ 3:1)

@@ -52,7 +52,13 @@ export default function PrivacyPage() {
             <p>
               Uniquement ce que vous saisissez dans le formulaire de contact : votre nom, votre
               adresse e-mail, le type de projet et votre message. Le site n&apos;utilise ni cookies,
-              ni outil de mesure d&apos;audience, ni publicité.
+              ni publicité.
+            </p>
+            <p>
+              Pour savoir quelles pages sont consultées, nous utilisons Cloudflare Web Analytics, un
+              outil de mesure d&apos;audience sans cookie qui ne suit pas les visiteurs d&apos;un
+              site à l&apos;autre. Il produit uniquement des statistiques globales (pages vues,
+              pays, type d&apos;appareil), sans vous identifier.
             </p>
             <p>
               Votre adresse IP est utilisée de façon temporaire, sans être enregistrée par nos
@@ -68,9 +74,9 @@ export default function PrivacyPage() {
             <h2 className="h3">Qui les reçoit</h2>
             <p>
               {site.companyName} uniquement, ainsi que nos prestataires techniques (hébergement du
-              site, acheminement et stockage des e-mails, protection anti-robot), qui
-              n&apos;agissent que pour notre compte. Certains sont situés hors de Madagascar,
-              notamment en Europe et aux États-Unis.
+              site, mesure d&apos;audience, acheminement et stockage des e-mails, protection
+              anti-robot), qui n&apos;agissent que pour notre compte. Certains sont situés hors de
+              Madagascar, notamment en Europe et aux États-Unis.
             </p>
 
             <h2 className="h3">Combien de temps</h2>

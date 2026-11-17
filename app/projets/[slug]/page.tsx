@@ -88,7 +88,8 @@ export default async function ProjectCaseStudyPage({ params }: PageProps) {
       <main id="contenu">
         <section className="section section--border">
           <div className="container case-head">
-            <Reveal>
+            {/* Pas de Reveal : le h1 est l'élément LCP, il doit s'afficher sans attendre le JS. */}
+            <div>
               <Link className="textlink case-back" href="/#projets">
                 <ArrowLeft size={15} aria-hidden="true" /> Retour aux projets
               </Link>
@@ -122,7 +123,7 @@ export default async function ProjectCaseStudyPage({ params }: PageProps) {
                   </a>
                 )}
               </div>
-            </Reveal>
+            </div>
           </div>
         </section>
 

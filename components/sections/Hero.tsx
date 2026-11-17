@@ -8,7 +8,8 @@ export function Hero() {
     <section id="accueil" className="hero" aria-labelledby="hero-title">
       <div className="container hero__inner">
         <div className="hero__text">
-          <Reveal>
+          {/* Pas de Reveal : le h1 est l'élément LCP, il doit s'afficher sans attendre le JS. */}
+          <div>
             <span className="pill">
               <span className="pill__dot" aria-hidden="true" />
               Agence de développement digital
@@ -38,7 +39,7 @@ export function Hero() {
               <li>MOBILE</li>
               <li>UI/UX</li>
             </ul>
-          </Reveal>
+          </div>
         </div>
 
         <div className="hero__visualwrap">

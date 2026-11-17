@@ -24,10 +24,14 @@ Cocher au fur et à mesure. Ajouter ici tout nouveau chantier.
 - [x] FAQ sur les pages de services (`site.faq` + `faq` par service, JSON-LD `FAQPage`)
 - [ ] Préciser la FAQ : durée de la garantie de corrections, hébergement, anglais, moyens de paiement
 - [x] Étoffer chaque page de service : section « Pour quels projets ? » (`audience`, `useCases`)
-- [ ] Inscrire le site dans Google Search Console et y soumettre `/sitemap.xml`
+- [x] Inscrire le site dans Google Search Console et y soumettre `/sitemap.xml`
 - [ ] Valider le JSON-LD avec le test des résultats enrichis de Google une fois en ligne
 - [x] Confirmer la ville pour le SEO local (Antananarivo, `address` dans le JSON-LD)
 - [x] Intégrer Poppins dans les images Open Graph
+- [x] Page création de site web : vitrine, e-commerce, « site internet », clients en France (Search Console : requêtes « création site web Madagascar » en position 70-100)
+- [ ] Créer la fiche Google Business Profile (Antananarivo) et y mettre le lien du site
+- [ ] Obtenir des liens vers le site : page Facebook, annuaires d'entreprises malgaches, « réalisé par E-Creation » sur les sites clients
+- [ ] Mi-décembre 2026 : relire Search Console (position des requêtes « création site web Madagascar »)
 
 ## Légal
 

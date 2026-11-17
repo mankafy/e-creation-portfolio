@@ -6,6 +6,8 @@ import type { SiteConfig } from "./site.types";
  */
 export const site: SiteConfig = {
   companyName: "E-Creation",
+  // Variantes du nom tapées dans Google (JSON-LD alternateName).
+  alternateNames: ["E Creation", "Ecreation"],
   locale: "fr",
   demoMode: false,
   description:
@@ -63,11 +65,12 @@ export const site: SiteConfig = {
       title: "Développement Web",
       description:
         "Sites web, applications métier, plateformes SaaS et interfaces web responsives.",
-      heading: "Création de sites web et d'applications web à Madagascar",
+      heading: "Création de site web à Madagascar : vitrine, e-commerce, application",
       intro:
-        "Basés à Antananarivo, nous concevons et développons des sites web, des applications métier et des plateformes SaaS adaptés à tous les écrans, pour des clients à Madagascar et partout ailleurs.",
+        "Basés à Antananarivo, nous créons votre site internet sur mesure : site vitrine, boutique en ligne ou application web, adapté à tous les écrans. Nous travaillons avec des clients à Madagascar et, à distance, en France comme partout ailleurs.",
       includes: [
-        "Sites web",
+        "Sites vitrines",
+        "Boutiques en ligne et marketplaces",
         "Applications métier",
         "Plateformes SaaS",
         "Interfaces web responsives",
@@ -83,6 +86,18 @@ export const site: SiteConfig = {
           projectId: "btp-construction",
         },
         { label: "Plateformes SaaS avec espace client" },
+      ],
+      faq: [
+        {
+          question: "Quelle différence entre un site vitrine et une application web ?",
+          answer:
+            "Un site vitrine présente votre activité et permet de vous contacter : quelques pages, un formulaire, une bonne visibilité sur Google. Une application web est un outil que vos clients ou vos équipes utilisent : comptes, données, tableaux de bord, back-office. Nous vous aidons à choisir selon votre besoin.",
+        },
+        {
+          question: "Pouvez-vous créer une boutique en ligne ?",
+          answer:
+            "Oui. Nous développons des boutiques en ligne et des marketplaces sur mesure : catalogue, recherche, panier, commandes et back-office pour gérer produits, promotions et statistiques.",
+        },
       ],
     },
     {

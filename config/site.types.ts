@@ -100,6 +100,8 @@ export interface SocialLink {
 
 export interface SiteConfig {
   companyName: string;
+  /** Autres graphies du nom (JSON-LD `alternateName`). */
+  alternateNames?: string[];
   locale: Locale;
   /** true : affiche des emplacements "à renseigner" (coordonnées, projets). À passer à false en production. */
   demoMode: boolean;
